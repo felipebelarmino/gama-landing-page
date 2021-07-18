@@ -11,6 +11,6 @@ npm start
 ```
 ### Azure Web App Deployment
 
-- You can test the aplication here
-https://sundaystore.azurewebsites.net
+- You can test the aplication bellow
 ```
+https://sundaystore.azurewebsites.net
