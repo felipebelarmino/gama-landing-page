@@ -1,19 +1,18 @@
 on: push
 
 env:
-  AZURE_WEBAPP_NAME: gamasundaystore    # set this to your application's name
-  AZURE_WEBAPP_PACKAGE_PATH: 'build'      # set this to the path to your web app project, defaults to the repository root
-  NODE_VERSION: '14.17.0'                 # set this to the node version to use
+  AZURE_WEBAPP_NAME: sundaystore # set this to your application's name
+  AZURE_WEBAPP_PACKAGE_PATH: 'build'  # set this to the path to your web app project, defaults to the repository root
+  NODE_VERSION: '10.x'                # set this to the node version to use
 
 jobs:
   build-and-deploy:
     name: Build and Deploy
     runs-on: ubuntu-latest
-    environment: production
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ env.NODE_VERSION }}
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v1
       with:
         node-version: ${{ env.NODE_VERSION }}
     - name: npm install, build, and test
